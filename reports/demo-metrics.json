@@ -1,0 +1,485 @@
+{
+  "validation": {
+    "classification": {
+      "prevalence": {
+        "average_precision": 0.11336032388663968,
+        "roc_auc": 0.5,
+        "brier_score": 0.10051665765029344,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "false_positive_rate": 0.0,
+        "missed_failure_windows": 252,
+        "false_alarm_windows": 0,
+        "confusion_matrix": [
+          [
+            1971,
+            0
+          ],
+          [
+            252,
+            0
+          ]
+        ],
+        "threshold": 0.5,
+        "positive_rate": 0.11336032388663968,
+        "windows": 2223
+      },
+      "logistic": {
+        "average_precision": 0.990427052172026,
+        "roc_auc": 0.9987215417200197,
+        "brier_score": 0.009637308654211288,
+        "precision": 0.92578125,
+        "recall": 0.9404761904761905,
+        "f1": 0.9330708661417323,
+        "false_positive_rate": 0.009639776763064434,
+        "missed_failure_windows": 15,
+        "false_alarm_windows": 19,
+        "confusion_matrix": [
+          [
+            1952,
+            19
+          ],
+          [
+            15,
+            237
+          ]
+        ],
+        "threshold": 0.5,
+        "positive_rate": 0.11336032388663968,
+        "windows": 2223
+      },
+      "gradient_boosting": {
+        "average_precision": 0.990423224118061,
+        "roc_auc": 0.9987195283998936,
+        "brier_score": 0.011130392250562213,
+        "precision": 0.9221789883268483,
+        "recall": 0.9404761904761905,
+        "f1": 0.931237721021611,
+        "false_positive_rate": 0.010147133434804667,
+        "missed_failure_windows": 15,
+        "false_alarm_windows": 20,
+        "confusion_matrix": [
+          [
+            1951,
+            20
+          ],
+          [
+            15,
+            237
+          ]
+        ],
+        "threshold": 0.5,
+        "positive_rate": 0.11336032388663968,
+        "windows": 2223
+      }
+    },
+    "rul": {
+      "median": {
+        "mae_cycles": 47.979757085020246,
+        "rmse_cycles": 56.27936630351275
+      },
+      "ridge": {
+        "mae_cycles": 13.800767066056562,
+        "rmse_cycles": 17.81894926760877
+      },
+      "gradient_boosting": {
+        "mae_cycles": 11.190306917086529,
+        "rmse_cycles": 16.130468110704147
+      }
+    }
+  },
+  "test": {
+    "classification": {
+      "average_precision": 0.9874502183020334,
+      "roc_auc": 0.9984233873122762,
+      "brier_score": 0.010912144976244225,
+      "precision": 0.9620253164556962,
+      "recall": 0.9047619047619048,
+      "f1": 0.9325153374233128,
+      "false_positive_rate": 0.004329004329004329,
+      "missed_failure_windows": 24,
+      "false_alarm_windows": 9,
+      "confusion_matrix": [
+        [
+          2070,
+          9
+        ],
+        [
+          24,
+          228
+        ]
+      ],
+      "threshold": 0.5,
+      "positive_rate": 0.10810810810810811,
+      "windows": 2331
+    },
+    "rul": {
+      "mae_cycles": 12.951263799542744,
+      "rmse_cycles": 19.658866469055283
+    },
+    "prevalence_baseline": {
+      "average_precision": 0.10810810810810811,
+      "roc_auc": 0.5,
+      "brier_score": 0.09648281411127395,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "false_positive_rate": 0.0,
+      "missed_failure_windows": 252,
+      "false_alarm_windows": 0,
+      "confusion_matrix": [
+        [
+          2079,
+          0
+        ],
+        [
+          252,
+          0
+        ]
+      ],
+      "threshold": 0.5,
+      "positive_rate": 0.10810810810810811,
+      "windows": 2331
+    },
+    "median_rul_baseline": {
+      "mae_cycles": 50.274989274989274,
+      "rmse_cycles": 59.03365602749455
+    }
+  },
+  "machine_splits": {
+    "test": [
+      "M006",
+      "M008",
+      "M018",
+      "M019",
+      "M025",
+      "M028",
+      "M029",
+      "M040",
+      "M045",
+      "M051",
+      "M056",
+      "M060"
+    ],
+    "validation": [
+      "M005",
+      "M021",
+      "M026",
+      "M030",
+      "M032",
+      "M038",
+      "M043",
+      "M049",
+      "M050",
+      "M053",
+      "M055",
+      "M058"
+    ],
+    "train": [
+      "M001",
+      "M002",
+      "M003",
+      "M004",
+      "M007",
+      "M009",
+      "M010",
+      "M011",
+      "M012",
+      "M013",
+      "M014",
+      "M015",
+      "M016",
+      "M017",
+      "M020",
+      "M022",
+      "M023",
+      "M024",
+      "M027",
+      "M031",
+      "M033",
+      "M034",
+      "M035",
+      "M036",
+      "M037",
+      "M039",
+      "M041",
+      "M042",
+      "M044",
+      "M046",
+      "M047",
+      "M048",
+      "M052",
+      "M054",
+      "M057",
+      "M059"
+    ]
+  },
+  "most_confident_errors": [
+    {
+      "machine_id": "M045",
+      "cycle": 219,
+      "actual_failure_window": 1,
+      "risk_score": 0.07184239904875826,
+      "actual_rul": 20,
+      "estimated_rul": 24.785992747060735
+    },
+    {
+      "machine_id": "M040",
+      "cycle": 173,
+      "actual_failure_window": 1,
+      "risk_score": 0.11764885884904916,
+      "actual_rul": 20,
+      "estimated_rul": 26.978443250253164
+    },
+    {
+      "machine_id": "M025",
+      "cycle": 202,
+      "actual_failure_window": 1,
+      "risk_score": 0.1183429719690678,
+      "actual_rul": 19,
+      "estimated_rul": 23.611248634880553
+    },
+    {
+      "machine_id": "M040",
+      "cycle": 174,
+      "actual_failure_window": 1,
+      "risk_score": 0.11997529379579007,
+      "actual_rul": 19,
+      "estimated_rul": 26.978443250253164
+    },
+    {
+      "machine_id": "M006",
+      "cycle": 174,
+      "actual_failure_window": 1,
+      "risk_score": 0.15268709533040858,
+      "actual_rul": 20,
+      "estimated_rul": 25.099158304836998
+    },
+    {
+      "machine_id": "M040",
+      "cycle": 175,
+      "actual_failure_window": 1,
+      "risk_score": 0.16167602190326777,
+      "actual_rul": 18,
+      "estimated_rul": 25.389936540381452
+    },
+    {
+      "machine_id": "M028",
+      "cycle": 183,
+      "actual_failure_window": 0,
+      "risk_score": 0.8281315572657981,
+      "actual_rul": 21,
+      "estimated_rul": 17.011912683336494
+    },
+    {
+      "machine_id": "M040",
+      "cycle": 178,
+      "actual_failure_window": 1,
+      "risk_score": 0.20689589278393167,
+      "actual_rul": 15,
+      "estimated_rul": 26.485304950082956
+    },
+    {
+      "machine_id": "M040",
+      "cycle": 176,
+      "actual_failure_window": 1,
+      "risk_score": 0.21118115424819162,
+      "actual_rul": 17,
+      "estimated_rul": 24.7657379383729
+    },
+    {
+      "machine_id": "M025",
+      "cycle": 203,
+      "actual_failure_window": 1,
+      "risk_score": 0.2387033167451833,
+      "actual_rul": 18,
+      "estimated_rul": 22.677695051101214
+    },
+    {
+      "machine_id": "M025",
+      "cycle": 201,
+      "actual_failure_window": 1,
+      "risk_score": 0.23945964496640929,
+      "actual_rul": 20,
+      "estimated_rul": 22.977203224381967
+    },
+    {
+      "machine_id": "M019",
+      "cycle": 176,
+      "actual_failure_window": 0,
+      "risk_score": 0.7604459393929984,
+      "actual_rul": 21,
+      "estimated_rul": 20.09568331749397
+    },
+    {
+      "machine_id": "M018",
+      "cycle": 182,
+      "actual_failure_window": 0,
+      "risk_score": 0.7563570683199008,
+      "actual_rul": 21,
+      "estimated_rul": 18.418781365191595
+    },
+    {
+      "machine_id": "M018",
+      "cycle": 181,
+      "actual_failure_window": 0,
+      "risk_score": 0.754147556708959,
+      "actual_rul": 22,
+      "estimated_rul": 21.03570793484594
+    },
+    {
+      "machine_id": "M006",
+      "cycle": 176,
+      "actual_failure_window": 1,
+      "risk_score": 0.2490629475074827,
+      "actual_rul": 18,
+      "estimated_rul": 25.64698702969554
+    },
+    {
+      "machine_id": "M006",
+      "cycle": 175,
+      "actual_failure_window": 1,
+      "risk_score": 0.26834136318557134,
+      "actual_rul": 19,
+      "estimated_rul": 25.297025524731072
+    },
+    {
+      "machine_id": "M018",
+      "cycle": 178,
+      "actual_failure_window": 0,
+      "risk_score": 0.7042524148503542,
+      "actual_rul": 25,
+      "estimated_rul": 20.306374071395197
+    },
+    {
+      "machine_id": "M060",
+      "cycle": 210,
+      "actual_failure_window": 1,
+      "risk_score": 0.30612690706430945,
+      "actual_rul": 20,
+      "estimated_rul": 22.51619708163423
+    },
+    {
+      "machine_id": "M045",
+      "cycle": 222,
+      "actual_failure_window": 1,
+      "risk_score": 0.3129859698844389,
+      "actual_rul": 17,
+      "estimated_rul": 19.756243788168355
+    },
+    {
+      "machine_id": "M025",
+      "cycle": 205,
+      "actual_failure_window": 1,
+      "risk_score": 0.319024022815428,
+      "actual_rul": 16,
+      "estimated_rul": 20.188741055769093
+    },
+    {
+      "machine_id": "M056",
+      "cycle": 135,
+      "actual_failure_window": 0,
+      "risk_score": 0.6695319692217604,
+      "actual_rul": 21,
+      "estimated_rul": 18.76909528694084
+    },
+    {
+      "machine_id": "M028",
+      "cycle": 181,
+      "actual_failure_window": 0,
+      "risk_score": 0.6620270977048083,
+      "actual_rul": 23,
+      "estimated_rul": 20.603210667245204
+    },
+    {
+      "machine_id": "M060",
+      "cycle": 211,
+      "actual_failure_window": 1,
+      "risk_score": 0.34323700471977625,
+      "actual_rul": 19,
+      "estimated_rul": 20.42723516939063
+    },
+    {
+      "machine_id": "M008",
+      "cycle": 194,
+      "actual_failure_window": 1,
+      "risk_score": 0.3519838476316904,
+      "actual_rul": 17,
+      "estimated_rul": 21.3948597577628
+    },
+    {
+      "machine_id": "M045",
+      "cycle": 221,
+      "actual_failure_window": 1,
+      "risk_score": 0.35803221075060093,
+      "actual_rul": 18,
+      "estimated_rul": 19.6683125516464
+    },
+    {
+      "machine_id": "M045",
+      "cycle": 220,
+      "actual_failure_window": 1,
+      "risk_score": 0.3597724742692553,
+      "actual_rul": 19,
+      "estimated_rul": 20.160074715428884
+    },
+    {
+      "machine_id": "M029",
+      "cycle": 144,
+      "actual_failure_window": 1,
+      "risk_score": 0.36911667561664024,
+      "actual_rul": 20,
+      "estimated_rul": 22.346470883357377
+    },
+    {
+      "machine_id": "M018",
+      "cycle": 180,
+      "actual_failure_window": 0,
+      "risk_score": 0.5944987652477581,
+      "actual_rul": 23,
+      "estimated_rul": 21.32150639126197
+    },
+    {
+      "machine_id": "M040",
+      "cycle": 177,
+      "actual_failure_window": 1,
+      "risk_score": 0.41015219261137253,
+      "actual_rul": 16,
+      "estimated_rul": 24.011418823092765
+    },
+    {
+      "machine_id": "M045",
+      "cycle": 223,
+      "actual_failure_window": 1,
+      "risk_score": 0.4226346326364521,
+      "actual_rul": 16,
+      "estimated_rul": 18.2614438697913
+    },
+    {
+      "machine_id": "M025",
+      "cycle": 204,
+      "actual_failure_window": 1,
+      "risk_score": 0.4311710189077142,
+      "actual_rul": 17,
+      "estimated_rul": 20.53870256073356
+    },
+    {
+      "machine_id": "M019",
+      "cycle": 174,
+      "actual_failure_window": 0,
+      "risk_score": 0.5400379343969859,
+      "actual_rul": 23,
+      "estimated_rul": 21.96636162262901
+    },
+    {
+      "machine_id": "M006",
+      "cycle": 177,
+      "actual_failure_window": 1,
+      "risk_score": 0.4928508905148166,
+      "actual_rul": 17,
+      "estimated_rul": 22.96411816489339
+    }
+  ],
+  "scope": "Window metrics are correlated within machines; no confidence interval or physical safety claim."
+}

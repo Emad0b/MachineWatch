@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "model_version": "demo-v1",
+  "features": [
+    "cycle",
+    "temperature_last",
+    "vibration_last",
+    "pressure_last",
+    "temperature_mean",
+    "vibration_mean",
+    "pressure_mean",
+    "temperature_slope",
+    "vibration_slope",
+    "pressure_slope"
+  ],
+  "window": 10,
+  "horizon_cycles": 20,
+  "threshold": 0.5,
+  "data_provenance": "engineered synthetic demonstration",
+  "classifier": "logistic",
+  "regressor": "gradient_boosting",
+  "model_sha256": "5770c7a8a4a777a8a9c57381d1a8576796384a2511c4fdb87f1f7dc4b0834d20",
+  "dataset_sha256": "d9783408f14a8689adfae8936d5925a184df2f114efb21cf8f98e376d3667f2a",
+  "seed": 42,
+  "python": "3.12.14",
+  "sklearn": "1.9.1",
+  "numpy": "2.5.2",
+  "training_seconds": 0.29806569998618215
+}

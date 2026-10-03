@@ -1,0 +1,14 @@
+name: Verify
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements-dev.txt -c requirements-lock.txt
+      - run: python -m pytest -q
+      - run: docker build -t machinewatch-ci .
+      - run: docker run --rm machinewatch-ci python -c "import machinewatch.service; print('Container imports successfully')"
