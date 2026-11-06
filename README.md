@@ -1,5 +1,7 @@
 # MachineWatch
 
+MachineWatch shows how sensor readings can help flag equipment that may fail soon. Use the dashboard to inspect changes in temperature, vibration, and pressure and explore maintenance decisions with simulated data.
+
 An independent time-series ML project for predicting failure windows and remaining
 useful life from temperature, vibration and pressure readings. A FastAPI service
 and dashboard show risk scores, sensor trajectories, model versions and evaluation.
